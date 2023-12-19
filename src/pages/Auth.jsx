@@ -1,23 +1,30 @@
-import React from 'react'
+import React from 'react';
+import styles from '../assets/styles/auth.module.css'
+import { Link, NavLink } from 'react-router-dom';
+import routes from '../utils/consts';
 
 const Auth = () => {
   return (
-    <div>
-      <form action="">
-        <div className=" relative my-4  ">
-          <input type="email" className=' block w-72 py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none '/>
-          <label htmlFor="">Имя пользователя</label>
+    <div className={styles.box}>
+      <form>
+        <div className={styles.inputBox}>
+          <input type="text" required="required"/>
+          <span>Имя пользователя</span>
         </div>
 
-        <div className=" relative my-4  ">
-          <input type="password" className=' block w-72 py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none '/>
-          <label htmlFor="">Пароль</label>
+        <div className={styles.inputBox}>
+          <input type="password" required="required"/>
+          <span>Пароль</span>
+      
         </div>
-        <div>
-          <span>Забыли пароль</span>
+        <div className={styles.links}>
+          <a href='/'>Забыл пароль</a>
         </div>
-        <button type='submit'>Войти</button>
-        <div>Зарегистрироваться</div>
+          <button type='login' className={styles.primaryBtn}>Войти</button>
+          <p className={styles.top}>
+            <a href={routes.REGISTRATION} className={styles.register}>Зарегистрироваться</a>
+        </p>        
+          
       </form>
     </div>
   )
