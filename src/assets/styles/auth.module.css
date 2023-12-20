@@ -5,21 +5,25 @@
   font-family: 'Inter', sans-serif;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+.container {
+   display: flex;
+   max-height: 100vh;
 }
 
 .box {
   position: relative;
   width: 380px;
   height: 420px;
+  padding: 50px 40px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
 }
 
 .box form {
   position: absolute;
+  left: 300px;
+  top:100px;
   padding: 50px 40px;
   z-index: 2;
   display: flex;
@@ -62,7 +66,7 @@ body {
 
 .box form .inputBox input:valid ~ span,
 .box form .inputBox input:focus ~ span{
-  color: #23242a;
+  color: #C0C0C0;
   font-size: 0.75em;
   transform: translateY(-34px);
 }
@@ -88,29 +92,38 @@ body {
 
 
 .links {
-  margin-top: 16px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .box form .links a {
   margin: 10px 0;
   padding-top: 10px;
-  font-size: 1em;
+  font-size: 0.9em;
   font-family: 'Inter',sans-serif;
   color: #5458EA;
   text-decoration: none;
+  transition: 0.2s;
+}
+
+.box form .links .eyeBtn {
+  position: absolute;
+  right: 65px;
+  top:190px;
 }
 
 .box form .links a:hover
 {
-  color: #0011ff7d;
+  color: #5458EA;;
 }
 
 
 .primaryBtn {
     margin: 30px 0;
     width: 320px;
-    height: 35px;
+    height: 45px;
     border: none;
     font-size: 16px;
     font-weight: 700;
@@ -121,10 +134,14 @@ body {
 }
 
 .register {
-  text-decoration: none;
+  position: absolute;
+  left: 25em;
+  top: 40em;
+  font-weight: 600;
 }
 
-.top {
-  margin-left: 5em;
-  margin-top: 8em;
+.register a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #5458EA;
 }
