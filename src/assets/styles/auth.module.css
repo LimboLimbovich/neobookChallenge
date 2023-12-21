@@ -10,6 +10,26 @@
    max-height: 100vh;
 }
 
+
+.bg {
+  z-index: -1;
+}
+
+.cart {
+  position: absolute;
+  z-index: 2;
+  width: 230px;
+  height: 250px;
+  left: 250px;
+  top:260px;
+}
+
+.shadow {
+  position: absolute;
+  bottom: 0px;
+  z-index: 1;
+}
+
 .box {
   position: relative;
   width: 380px;
@@ -108,12 +128,6 @@
   transition: 0.2s;
 }
 
-.box form .links .eyeBtn {
-  position: absolute;
-  right: 65px;
-  top:190px;
-}
-
 .box form .links a:hover
 {
   color: #5458EA;;
@@ -145,3 +159,11 @@
   text-decoration: none;
   color: #5458EA;
 }
+
+.eyeBtn, .disabled {
+  position: absolute;
+  right: 10px;
+  top:20px;
+  z-index: 99;
+}
+
