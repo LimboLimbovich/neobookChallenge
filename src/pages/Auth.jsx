@@ -7,14 +7,14 @@ import eye from '../assets/images/eye-disable.png';
 import lightShadow from '../assets/images/Rectangle 1.png'
 import eyeDisable from '../assets/images/eye.png';
 
+
 const Auth = () => {
   const [formValid, setFormValid] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [eyeClicked, setEyeClicked] = useState(false);
+ 
 
   useEffect(() => {
-    // Assume you have some validation logic for name and password errors.
-    // Replace with your actual validation logic.
     const nameError = false;
     const passwordError = false;
 
@@ -74,3 +74,4 @@ const Auth = () => {
 };
 
 export default Auth;
+
