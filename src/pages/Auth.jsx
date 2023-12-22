@@ -9,21 +9,22 @@ import eyeDisable from '../assets/images/eye.png';
 
 
 const Auth = () => {
-  const [formValid, setFormValid] = useState(false);
+  // const [formValid, setFormValid] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [eyeClicked, setEyeClicked] = useState(false);
  
 
-  useEffect(() => {
-    const nameError = false;
-    const passwordError = false;
+  // useEffect(() => {
+  //   const nameError = false;
+  //   const passwordError = false;
 
-    if (nameError || passwordError) {
-      setFormValid(false);
-    } else {
-      setFormValid(true);
-    }
-  }, [formValid]);
+  //   if (nameError || passwordError) {
+  //     setFormValid(false);
+  //   } else {
+  //     // window.location.href = '/';
+  //     setFormValid(true);
+  //   }
+  // }, [formValid]);
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -61,7 +62,7 @@ const Auth = () => {
           <div className={styles.links}>
             <a href='/'>Забыл пароль</a>
           </div>
-          <button type='login' className={styles.primaryBtn} disabled={!formValid}>
+          <button type='login' className={styles.primaryBtn}>
             Войти
           </button>
         </form>
